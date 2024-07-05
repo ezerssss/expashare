@@ -1,7 +1,15 @@
+import CreatePost from '@/components/CreatePost';
+import Header from '@/components/Header';
+import Posts from '@/components/Posts';
+
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <h1>expashare</h1>
-        </main>
+        <>
+            <Header />
+            <main>
+                <CreatePost />
+                <Posts />
+            </main>
+        </>
     );
 }

@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --font-color: #393939;
+    --font-placeholder-color: #4b5563;
+
+    --background-color: #ffff;
+
+    --link-color: #cb2a42;
+}
+
+.dark-theme {
+    --font-color: #ffff;
+    --font-placeholder-color: #9ca3af;
+
+    --background-color: #393939;
+
+    --link-color: #29bc89;
+}
+
+.header-link-border {
+    border-right: var(--link-color);
+    border-right-style: dashed;
+    border-right-width: 1px;
+}
+
+.link-color {
+    color: var(--link-color);
+}
+
+.placeholder-color {
+    color: var(--font-placeholder-color);
+}
+
+body {
+    color: var(--font-color);
+    background-color: var(--background-color);
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+.ql-toolbar span {
+    background-color: var(--background-color) !important;
+}
+
+.ql-toolbar span::before {
+    color: var(--font-color) !important;
+}
+
+.ql-editor.ql-blank::before {
+    color: var(--font-placeholder-color) !important;
+}
+
+.ql-toolbar svg,
+.ql-toolbar path,
+.ql-toolbar polygon,
+.ql-toolbar polyline,
+.ql-toolbar rect,
+.ql-toolbar line {
+    stroke: var(--font-color) !important;
+}
+
+.post .ql-editor {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.liked path:last-child {
+    fill: var(--link-color) !important;
+}
