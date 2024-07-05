@@ -84,6 +84,7 @@ function CreatePost() {
 
             alert('successfully posted');
             setValue(undefined);
+            window.location.reload();
         } catch (error) {
             console.error(error);
             alert('Something went wrong.');

@@ -156,7 +156,7 @@ function page() {
             <h1 className="mb-10">
                 login to post in{' '}
                 <Link href="/" className="font-bold underline link-color">
-                    refushare
+                    expashare
                 </Link>
             </h1>
 

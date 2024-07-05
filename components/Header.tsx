@@ -14,7 +14,7 @@ function Header() {
                 />
                 <div>
                     <h1 className="font-semibold text-xl md:text-2xl">
-                        refushare
+                        expashare
                     </h1>
                     <div className="flex text-sm link-color">
                         <Link href="/" className="header-link-border pr-3">
