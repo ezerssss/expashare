@@ -7,6 +7,10 @@ function ThemeHandler() {
     const [isDark, setIsDark] = useState(false);
 
     function handleChangeTheme() {
+        if (typeof window === undefined) {
+            return;
+        }
+
         // Change to light theme
         if (isDark) {
             document.body.classList.remove('dark-theme');

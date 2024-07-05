@@ -1,15 +1,19 @@
-'use client';
-
-import CreatePost from '@/components/CreatePost';
 import Header from '@/components/Header';
-import Posts from '@/components/Posts';
+import dynamic from 'next/dynamic';
+
+const CreatePosts = dynamic(() => import('../components/CreatePost'), {
+    ssr: false,
+});
+const Posts = dynamic(() => import('../components/Posts'), {
+    ssr: false,
+});
 
 export default function Home() {
     return (
         <>
             <Header />
             <main>
-                <CreatePost />
+                <CreatePosts />
                 <Posts />
             </main>
         </>

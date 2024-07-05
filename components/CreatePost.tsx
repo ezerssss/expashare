@@ -3,6 +3,7 @@
 import db from '@/firebase/db';
 import useUser from '@/hooks/useUser';
 import { Timestamp, addDoc, collection } from 'firebase/firestore';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
@@ -39,6 +40,7 @@ const formats = [
 
 function CreatePost() {
     const { user, isLoggedIn } = useUser();
+    const router = useRouter();
 
     const [value, setValue] = useState<ReactQuill.Value>();
     const [isPosting, setIsPosting] = useState(false);
@@ -84,7 +86,7 @@ function CreatePost() {
 
             alert('successfully posted');
             setValue(undefined);
-            window.location.reload();
+            router.refresh();
         } catch (error) {
             console.error(error);
             alert('Something went wrong.');

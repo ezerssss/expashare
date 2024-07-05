@@ -1,3 +1,5 @@
+'use client';
+
 import { HeartHandshake } from 'lucide-react';
 import React from 'react';
 import ThemeHandler from './ThemeHandler';
