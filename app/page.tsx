@@ -1,3 +1,5 @@
+'use client';
+
 import CreatePost from '@/components/CreatePost';
 import Header from '@/components/Header';
 import Posts from '@/components/Posts';
