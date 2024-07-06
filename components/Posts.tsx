@@ -312,7 +312,7 @@ function Posts() {
                 setTotalCount(snapshot.data().count);
             } catch (error) {
                 console.error(error);
-                alert('something went wrong with fetching posts');
+                alert('something went wrong with fetching posts.');
             }
         })();
     }, []);
